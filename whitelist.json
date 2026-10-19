@@ -1,0 +1,10 @@
+{
+	"version": "11",
+	"min_version": 11,
+	"download_url": "",
+	"message": "",
+	"disabled": [],
+	"allowed": [
+		"76561198000000000"
+	]
+}
