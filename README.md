@@ -1,2 +1,2 @@
-# astral-whitelist
+# astral-userlist
 astral-project user list
