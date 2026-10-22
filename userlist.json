@@ -2,7 +2,8 @@
 	"version": "1.0.6",
 	"download_url": "",
 	"message": "",
-	"disabled": [],
+	"rev":1,
+	"disabled": [thirdperson],
 	"allowed": [
 		{ "id": "76561198120575634", "note": "Dev" },
 		{ "id": "76561198993932068", "note": "白绒泡泡" },
