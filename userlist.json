@@ -3,7 +3,7 @@
 	"download_url": "",
 	"message": "",
 	"rev":1,
-	"disabled": [thirdperson],
+	"disabled": ["thirdperson.lua"],
 	"allowed": [
 		{ "id": "76561198120575634", "note": "Dev" },
 		{ "id": "76561198993932068", "note": "白绒泡泡" },
