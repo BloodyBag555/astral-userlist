@@ -2,7 +2,7 @@
 	"version": "1.0.12.1",
 	"download_url": "",
 	"message": "",
-	"rev":2,
+	"rev":3,
 	"disabled": [""],
 	"allowed": [
 		{ "id": "76561198120575634", "note": "Dev" },
