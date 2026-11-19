@@ -14,5 +14,9 @@
     "76561198993932068": "白绒泡泡",
     "76561198892174356": "LoOwOo7",
     "76561199231521585": "zakoo"
+  },
+  "issuers": {
+    "list": "rev 1\nowner xMSILMylvJyynJLA0PE8sED2pDNNh8KM76E7FWZn4nQ public\n",
+    "sig": "UGM4PYiQ6kFvyPDdfRDSYgxSRSVq34DnaKT2AsKRr1nvnrTp87vUEukVXvL2nmc4NS6McT3vAxUZYdAnl7SnCg"
   }
 }
