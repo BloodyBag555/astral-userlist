@@ -1,0 +1,36 @@
+name: Stamp public.json time
+
+# Astral (public build) uses "time" in public.json as a lower bound for the date, so turning the PC clock back does
+# not bring an expired usage code back. This writes the current time into it once a day. Nothing else is changed.
+
+on:
+  schedule:
+    - cron: "37 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Write the current time
+        run: |
+          python3 - <<'PY'
+          import json, time
+          path = "public.json"
+          data = json.load(open(path, encoding="utf-8"))
+          if data.get("astral_public") is not True:
+              raise SystemExit("public.json must contain \"astral_public\": true")
+          data["time"] = int(time.time())
+          open(path, "w", encoding="utf-8").write(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public.json
+          git commit -m "public.json: time" || exit 0
+          git push
